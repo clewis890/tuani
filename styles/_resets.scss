@@ -1,0 +1,48 @@
+// Google fonts
+@import url('https://fonts.googleapis.com/css2?Righteous&family=Medula+One&family=Flamenco&Quicksand:wght@400;700display=swap');
+@import 'variables';
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    overflow-x: hidden;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    height: 100vh;
+}
+
+p {
+    color: set-text-color($primary-color);
+    line-height: 1.55em;
+    word-spacing: 5.6px;
+}
+
+li {
+    list-style: none;
+}
+
+section {
+    width: 100%;
+}
+
+header {
+    font-family: 'Righteous', cursive;
+    text-transform: uppercase;
+}
+
+a {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #D6E0EB;
+    text-decoration: none;
+}
+
+button {
+    border: 1px solid rgb(233, 226, 226);
+    text-decoration: none;
+}
+
