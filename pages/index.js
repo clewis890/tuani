@@ -6,7 +6,7 @@ import Header from '../assets/components/header'
 import HomeLayout from './pageComponents/homeLayout';
 import Parallax from '../assets/components/Parallax';
 import ComingSoon from './pageComponents/comingSoon'
-import ConstructionHeader from '../assets/components/ConstructionHeader'
+import ConstructionHeader from '../assets/components/constructionHeader'
 
 export default function Home() {
   return (
