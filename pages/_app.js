@@ -7,7 +7,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <React.Fragment>
       <ScopedCssBaseline />
-      <Header title="Tuani" />
+      {/* <Header title="Tuani" /> */}
         <Component {...pageProps} />
         <Footer />
     </React.Fragment>  
