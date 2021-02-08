@@ -3,7 +3,15 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Image from 'next/image'
+import PropTypes from 'prop-types';
 import Parallax from '../../assets/components/Parallax'
+import Typography from '@material-ui/core/Typography'
+import Card from '@material-ui/core/Card'
+import CardContent from '@material-ui/core/CardContent'
+import CardMedia from '@material-ui/core/CardMedia'
+import Hidden from '@material-ui/core/Hidden';
+import withWidth from '@material-ui/core/withWidth';
+import { isPropertyAccessExpression } from 'typescript';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -58,12 +66,12 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function HomeLayout() {
+function HomeLayout(props) {
     const classes = useStyles();
+    const { width } = props;
 
     return (
         <div className={classes.root}>
-            {/* <Parallax /> */}
             <Grid container spacing={5}>
                 <Grid item xs={12} md={6}>
                     <Paper className={classes.paper}>Tuani LLC is born of a desire to create a connection with and empower the people from my home country, Nicaragua. Though my time in Nicaragua has been short, every time I travel there and I get to experience the people and the landscapes, I am amazed by the creativity and mastery of local artisans working on wood, leather, and textiles. These are hard-working people who are trying their best to showcase their passions and share the Nicaraguan culture with the world.</Paper>
@@ -74,15 +82,24 @@ export default function HomeLayout() {
             </Grid>
             <Grid container spacing={3}>
                 <Grid className={classes.image} item xs={12} md={6}>
-                    <Image src="/statue.jpg" alt="" width={400} height={300} />
+                    <Image 
+                        style={{ boxShadow: '1px 2px 5px rgba(0 0 0 0 0.04)'}}
+                        src="/flag.png"  
+                        width={400} 
+                        height={300} 
+                        />
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <Paper className={classes.paper}>I realized there was an opportunity to create an easier way for Nicaraguan artisans to connect with the US market, by fulfilling the need of the North American market for incentive and appreciation gifts – which many companies see as a way to create, maintain, or strengthen relationships with clients, alumni, or community influencers. I myself struggled from time to time to find a unique way to say thank you – but was at times underwhelmed by the generic options available in the market… who needs another padfolio or USB drive with the logo of their alma mater or their financial advisor, after all.</Paper>
+                    
                 </Grid>
             </Grid>
             <Grid container spacing={3}>
                 <Grid item xs={12} md={6}>
-                    <Paper className={classes.paper}>So that’s why I founded Tuani LLC… for the Nicaraguan people, Tuani means “cool” and we believe it’s cool to give back. Our products shows our appreciation for our clients, and it also helps the local artisans that created it. Additionally, an education kit will be donated to a Nicaraguan kid in need on your behalf... because it’s Tuani to be nice!</Paper>
+                    <Paper className={classes.paper}
+                    >So that’s why I founded Tuani LLC… for the Nicaraguan people, Tuani means “cool” and we believe it’s cool to give back. Our products shows our appreciation for our clients, and it also helps the local artisans that created it. Additionally, an education kit will be donated to a Nicaraguan kid in need on your behalf... because it’s Tuani to be nice! <br />
+                     Thank you for partnering with us in this journey!
+                    </Paper>
                 </Grid>
                 <Grid className={classes.image} item xs={12} md={6}>
                         <Image 
@@ -93,15 +110,67 @@ export default function HomeLayout() {
                         />
                 </Grid>
             </Grid>
-            <Grid container spacing={3}>
-                <Grid item xs={12} md={6} style={{ margin: '0 auto' }}>
+            {/* <Grid 
+            container 
+            direction="row"
+            justify="center"
+            item="true"
+            spacing={4}
+            >
+                <Grid item xs={12} md={12}>
                     <Paper className={classes.paper}>
-                        <p className="main__paragraph4">
-                        Thank you for partnering with us in this journey!
-                        </p>
+                        <Typography variant="h5">Products</Typography>
+                        <Card md={3}>
+                                <CardMedia
+                                    component="img"
+                                    alt="Leather"
+                                    height="140"
+                                    image=""
+                                    title="Leather Products"
+                                />
+                                    <CardContent>
+                                        <Typography gutterBottom variant="h6" component="h2">
+                                            Leather Items
+                                        </Typography>
+                                    </CardContent>
+                        </Card>
+                        <Card md={3}>
+                                <CardMedia
+                                    component="img"
+                                    alt="Textile"
+                                    height="140"
+                                    image=""
+                                    title="Textile Products"
+                                />
+                                    <CardContent>
+                                        <Typography gutterBottom variant="h6" component="h2">
+                                            Textile Items
+                                        </Typography>
+                                    </CardContent>
+                        </Card>
+                        <Card md={3}>
+                                <CardMedia
+                                    component="img"
+                                    alt="Wood"
+                                    height="140"
+                                    image=""
+                                    title="Wood Products"
+                                />
+                                    <CardContent>
+                                        <Typography gutterBottom variant="h6" component="h2">
+                                            Wood Items
+                                        </Typography>
+                                    </CardContent>
+                        </Card>
                     </Paper>
                 </Grid>
-            </Grid>
+            </Grid> */}
         </div>
     )
 }
+
+HomeLayout.propTypes = {
+    width: PropTypes.oneOf(['lg', 'md', 'sm', 'xl', 'xs']).isRequired,
+};
+
+export default withWidth()(HomeLayout);

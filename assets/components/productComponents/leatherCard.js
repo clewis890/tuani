@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme => ({
         maxWidth: 320,
         elevation: 0,
         variant: 'elevated',
-        backgroundColor: '#D6E0EB',
+        // backgroundColor: '#D6E0EB',
     },
     media: {
         height: 0,

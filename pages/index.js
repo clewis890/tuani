@@ -5,6 +5,8 @@ import { Button } from "@material-ui/core"
 import Header from '../assets/components/header'
 import HomeLayout from './pageComponents/homeLayout';
 import Parallax from '../assets/components/Parallax';
+import ComingSoon from './pageComponents/comingSoon'
+import ConstructionHeader from '../assets/components/ConstructionHeader'
 
 export default function Home() {
   return (
@@ -13,7 +15,9 @@ export default function Home() {
           <title>Tuani</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-      <HomeLayout />
+        {/* <HomeLayout /> */}
+        <ConstructionHeader />
+      <ComingSoon />
     </>
   )
 }

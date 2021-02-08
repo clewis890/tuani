@@ -44,12 +44,10 @@ export default function TextileLayout() {
             <CssBaseline />
                 <Box 
                     boxShadow={12}
-                    bgColor="#372126"
                     borderRadius="15px"
                     m={10, 2}
                     p={50, 2, 10, 2}
-                    style={{ height: '100%', marginTop: '110px', marginBottom: '100px' }}
-                > 
+                    style={{ backgroundColor: '#D6E0EB', height: '100%', marginTop: '110px', marginBottom: '100px' }}> 
                 <ProductHeader />                
                     <ThemeProvider theme={theme}>
                         <Container  

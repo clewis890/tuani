@@ -1,29 +1,29 @@
 import React from 'react';
 import clsx from 'clsx';
-import Link from 'next/link'
+// import Link from 'next/link'
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
+
 import CssBaseline from '@material-ui/core/CssBaseline';
-import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
+
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import HomeIcon from '@material-ui/icons/Home';
-import StorefrontIcon from '@material-ui/icons/Storefront';
-import MailIcon from '@material-ui/icons/Mail';
-import ClickAwayListener from '@material-ui/core/ClickAwayListener';
-import Image from 'next/image'
+// import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+// import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+// import ListItem from '@material-ui/core/ListItem';
+// import ListItemIcon from '@material-ui/core/ListItemIcon';
+// import ListItemText from '@material-ui/core/ListItemText';
+// import HomeIcon from '@material-ui/icons/Home';
+// import StorefrontIcon from '@material-ui/icons/Storefront';
+// import MailIcon from '@material-ui/icons/Mail';
+// import ClickAwayListener from '@material-ui/core/ClickAwayListener';
+// import Image from 'next/image'
 import DropDown from '../components/DropDown'
+import AddIcon from '@material-ui/icons/Add';
+import CloseIcon from '@material-ui/icons/Close';
 
-import Button from '@material-ui/core/Button'
+// import Button from '@material-ui/core/Button'
 
 const drawerWidth = 180;
 
@@ -130,6 +130,9 @@ const useStyles = makeStyles((theme) => ({
     }),
     marginRight: 0,
   },
+  menuicon: {
+    fontSize: '1.7rem',
+  },
 }));
 
 
@@ -189,6 +192,7 @@ export default function NavBar() {
             className={clsx(open && classes.hide)}
           >
             <MenuIcon
+            className={classes.menuicon}
             color="#D6E0EB"
             />
           </IconButton>
@@ -208,7 +212,8 @@ export default function NavBar() {
       >
         <div className={classes.drawerHeader}>
           <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'rtl' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+            {/* {theme.direction === 'rtl' ? <ChevronLeftIcon /> : <ChevronRightIcon />} */}
+            {theme.direction === 'rtl' ? <AddIcon /> : <CloseIcon />}
           </IconButton>
         </div>
         <Divider />

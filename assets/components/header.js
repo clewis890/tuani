@@ -27,14 +27,19 @@ const Header = props => {
         fadeIn={"2s ease-in"}
         fadeOut={"0.7s ease-out"}
       >
-        <AppBar position="fixed">
-          <Toolbar>
+        <AppBar 
+        position="fixed"
+        style={{ borderRadius: '50px' }}
+        >
+          <Toolbar
+            style={{ display: 'flex', justifyContent: 'space-between ', width: '96%' }}
+          >
             <Typography variant="h5" noWrap>
             <Button
               href="/"
               variant="contained"
               style={{ backgroundColor: "inherit", boxShadow: 'none', borderRadius: '15px' }}
-              >
+            >
                 <h1 
                   style={{ color: '#D6E0EB', marginBlockEnd: '0', marginBlockStart: '0' }} 
                 >
