@@ -15,7 +15,7 @@ export default function Home() {
           <title>Tuani</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <HomeLayout />
+        {/* <HomeLayout /> */}
         <ConstructionHeader />
       <ComingSoon />
     </>
