@@ -38,10 +38,19 @@ const useStyles = makeStyles((theme) => ({
             height: '85%',
         },
     },
+    constructiontext: {
+        margin: '0 auto',
+        display: 'flex',
+        justifyContent: 'center',
+        flexDirection: 'row',
+        [theme.breakpoints.down('xs')]: {
+            width: '10%',
+        },
+    },
     warning: {
-        fontSize: '2rem',
         color: '#903921',
-        margin: '0 1rem',
+        fontSize: '2rem',
+        margin: '0 5px',
     },
 }));
 
@@ -65,11 +74,12 @@ export default function ComingSoon() {
                     title="Wood Products"
                     className={classes.tuani}
                     />
-                    <CardContent style={{ width: '50%', margin: '0 auto' }}>
+                    <CardContent style={{ width: '80%', margin: '0 auto', display: 'flex', justifyContent: 'space-around', }}>
                         <Typography
                         variant="h1>"
-                        component="h2"
-                        style={{ display: 'flex', justifyContent: 'space-around' }}
+                        component="h4"
+                        className={classes.constructiontext}
+                        style={{  width: '80%' }}
                         > 
                             <ReportProblemIcon
                             className={classes.warning}
