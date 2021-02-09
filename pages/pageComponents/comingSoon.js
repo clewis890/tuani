@@ -69,14 +69,17 @@ export default function ComingSoon() {
                         <Typography
                         variant="h1>"
                         component="h2"
-                        style={{   }}
+                        style={{ display: 'flex', justifyContent: 'space-around' }}
                         > 
                             <ReportProblemIcon
-                                className={classes.warning}
-                            >Warning</ReportProblemIcon>
-                        Under Construction!<ReportProblemIcon
                             className={classes.warning}
-                        >Warning</ReportProblemIcon>
+                            >Warning
+                            </ReportProblemIcon>
+                            Under Construction!
+                            <ReportProblemIcon
+                            className={classes.warning}
+                            >Warning
+                            </ReportProblemIcon>
                         </Typography>
                     </CardContent>
                 </Card>
