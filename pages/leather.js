@@ -14,7 +14,7 @@ export default function Leather() {
       <Layout>
       <Products />
         <ProductCard />
-    </Layout>
+      </Layout>
     </div>
   )
 };

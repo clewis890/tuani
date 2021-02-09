@@ -87,7 +87,6 @@ const useStyles = makeStyles((theme) => ({
             margin: '4em auto 0 auto',
         },
     },
-    
 }));
 
 export default function HomeLayout() {
@@ -102,12 +101,12 @@ export default function HomeLayout() {
                     </Paper>
                 </Grid>
                 <Grid className={classes.image} item xs={12} md={6}>
-                        <Image 
-                        src="/flag.png"  
-                        width={400} 
-                        height={300}
-                        style={{ marginTop: '2rem'}} 
-                        />
+                    <Image 
+                    src="/flag.png"  
+                    width={400} 
+                    height={300}
+                    style={{ marginTop: '2rem'}} 
+                    />
                 </Grid>
             </Grid>
             <Grid container spacing={3}>
@@ -124,6 +123,10 @@ export default function HomeLayout() {
             </Grid>
             </Grid>
            
+{/** This is the product preview card on home page.
+ * 3 segments. Leather, Textile, Wood. Make hover effect
+ * with a button that appears to navigate to individual product pages
+ */}
             {/* <Grid 
             container 
             direction="row"
