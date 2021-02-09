@@ -17,7 +17,7 @@ export default function Home() {
         </Head>
         {/* <HomeLayout /> */}
         <ConstructionHeader />
-      <ComingSoon />
+        <ComingSoon />
     </>
   )
 }
