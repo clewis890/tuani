@@ -90,9 +90,8 @@ const useStyles = makeStyles((theme) => ({
     
 }));
 
-function HomeLayout(props) {
+export default function HomeLayout() {
     const classes = useStyles();
-    const { width } = props;
 
     return (
         <div className={classes.root}>
@@ -184,8 +183,3 @@ function HomeLayout(props) {
     )
 }
 
-HomeLayout.propTypes = {
-    width: PropTypes.oneOf(['lg', 'md', 'sm', 'xl', 'xs']).isRequired,
-};
-
-export default withWidth()(HomeLayout);
