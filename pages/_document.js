@@ -28,7 +28,7 @@ class MyDocument extends Document {
           />
           <link rel="preconnect" href="https://fonts.gstatic.com"></link>
           <link 
-            href="https://fonts.googleapis.com/css2?family=Cantata+One&display=swap" 
+            href="https://fonts.googleapis.com/css2?family=Cantata+One&family=Righteous&family=Big+Shoulders+Inline+Display:wght@100&display=swap" 
             rel="stylesheet" />
           <link
             href="https://fonts.googleapis.com/icon?family=Material+Icons"

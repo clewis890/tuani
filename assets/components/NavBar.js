@@ -111,7 +111,7 @@ const useStyles = makeStyles((theme) => ({
   //   },
     },
   toolbartitle: {
-      fontFamily: 'Roboto, sans-serif',
+      fontFamily: 'Cormorant',
       fontWeight: '700',
   },
   content: {

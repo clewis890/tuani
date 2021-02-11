@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles, createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+// import classes from 'classes';
 
 import ListSubheader from '@material-ui/core/ListSubheader'
 import List from '@material-ui/core/List'
@@ -20,10 +21,14 @@ const useStyles = makeStyles((theme) => ({
     root: {
         width: '100%',
         maxWidth: 360,
+        fontFamily: 'Cormorant',
         // backgroundColor: theme.palette.background.paper,
     },
     nested: {
         paddingLeft: theme.spacing(4),
+    },
+    listItemText: {
+      fontFamily: 'Cormorant',
     },
 }));
 
@@ -59,7 +64,7 @@ export default function DropDown() {
     // };
 
     return (
-        <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
         <List
         component="nav"
         aria-labelledby="nested-list-subheader"
@@ -69,23 +74,23 @@ export default function DropDown() {
           </ListSubheader>
         }
         className={classes.root}
-      >
-
-        <ListItemLink href="/" button>
-          <ListItemIcon>
-          </ListItemIcon>
-          <ListItemText primary="Home" />
-        </ListItemLink>
-        <ListItemLink button>
-          <ListItemIcon>
-          </ListItemIcon>
-          <ListItemText primary="Contact" />
-        </ListItemLink>      
+        >
+          <ListItemLink href="/" button>
+            <ListItemIcon>
+            </ListItemIcon>
+              <ListItemText primary="Home" />
+          </ListItemLink>
+          <ListItemLink button>
+            <ListItemIcon>
+            </ListItemIcon>
+            <ListItemText primary="Contact" />
+          </ListItemLink>      
         <ListItem button onClick={handleClick}>
           <ListItemIcon>
           </ListItemIcon>
           {/** Dropdown part of menu */}
-          <ListItemText primary="Artesanal Products" />
+          <ListItemText 
+          primary="Artesanal Products" />
           {open ? <ExpandLess /> : <ExpandMore />}
         </ListItem>
         <Collapse in={open} timeout="auto" unmountOnExit>
