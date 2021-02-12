@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme => ({
         elevation: 0,
         variant: 'elevated',
         // backgroundColor: '#D6E0EB',
+        fontFamily: 'Carmorant',
     },
     media: {
         height: 0,

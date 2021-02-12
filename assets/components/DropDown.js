@@ -1,7 +1,9 @@
 import React from 'react';
 import { makeStyles, createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 // import classes from 'classes';
+import Typography from '@material-ui/core/Typography';
 
+import Divider from '@material-ui/core/Divider';
 import ListSubheader from '@material-ui/core/ListSubheader'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
@@ -22,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         maxWidth: 360,
         fontFamily: 'Cormorant',
+        // fontSize: '2rem',
         // backgroundColor: theme.palette.background.paper,
     },
     nested: {
@@ -30,12 +33,21 @@ const useStyles = makeStyles((theme) => ({
     listItemText: {
       fontFamily: 'Cormorant',
     },
+    home: {
+      fontSize: '2rem',
+      fontWeight: '800',
+    },
+    // dropdowntitle: {
+    //   paddingLeft: '5px',
+    // },
 }));
 
 const theme = createMuiTheme({
     overrides: {
         MuiListSubheader: {
             text: {
+                // fontFamily: 'Cormorant',
+                // fontWeight: '400',
                 fontSize: '1.3rem',
                 color: '#410312',
             },
@@ -65,6 +77,9 @@ export default function DropDown() {
 
     return (
       <ThemeProvider theme={theme}>
+        {/* <Typography variant="h6" className={classes.dropdowntitle}>
+            Tuani
+          </Typography> */}
         <List
         component="nav"
         aria-labelledby="nested-list-subheader"
@@ -75,18 +90,29 @@ export default function DropDown() {
         }
         className={classes.root}
         >
-          <ListItemLink href="/" button>
+         
+          <ListItemLink
+            disableGutters="true"
+            href="/" 
+            button>
             <ListItemIcon>
             </ListItemIcon>
-              <ListItemText primary="Home" />
+              <ListItemText className={classes.home} primary="Home" />
           </ListItemLink>
-          <ListItemLink button>
+          <ListItemLink 
+          disableGutters="true"
+          button>
             <ListItemIcon>
             </ListItemIcon>
-            <ListItemText primary="Contact" />
+            <ListItemText
+            disableGutters="true"
+            primary="Contact" />
           </ListItemLink>      
-        <ListItem button onClick={handleClick}>
-          <ListItemIcon>
+        <ListItem    
+        disableGutters="true"
+        button
+        onClick={handleClick}>
+          <ListItemIcon >
           </ListItemIcon>
           {/** Dropdown part of menu */}
           <ListItemText 
@@ -94,18 +120,18 @@ export default function DropDown() {
           {open ? <ExpandLess /> : <ExpandMore />}
         </ListItem>
         <Collapse in={open} timeout="auto" unmountOnExit>
-          <List component="div" disablePadding>
-            <ListItemLink href="/leather" button className={classes.nested}>
+          <List disabledGutters="true" component="div" disablePadding>
+            <ListItemLink disableGutters="true" href="/leather" button className={classes.nested}>
               <ListItemIcon>
               </ListItemIcon>
               <ListItemText primary="Leather" />
             </ListItemLink>
-            <ListItemLink href="/textile" button className={classes.nested}>
+            <ListItemLink disableGutters="true" href="/textile" button className={classes.nested}>
               <ListItemIcon>
               </ListItemIcon>
               <ListItemText primary="Textile" />
             </ListItemLink>
-            <ListItemLink href="/wood" button className={classes.nested}>
+            <ListItemLink disableGutters="true" href="/wood" button className={classes.nested}>
               <ListItemIcon>
               </ListItemIcon>
               <ListItemText primary="Wood" />

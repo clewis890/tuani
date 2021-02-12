@@ -8,8 +8,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
         [theme.breakpoints.down('xs')]: {
-            width: '90%',
-            margin: '0 auto',
+            width: '100%',
         },
     },
     paper: {

@@ -5,7 +5,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
-
+import Typography from '@material-ui/core/Typography'
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -17,7 +17,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 // import HomeIcon from '@material-ui/icons/Home';
 // import StorefrontIcon from '@material-ui/icons/Storefront';
 // import MailIcon from '@material-ui/icons/Mail';
-// import ClickAwayListener from '@material-ui/core/ClickAwayListener';
+import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 // import Image from 'next/image'
 import DropDown from '../components/DropDown'
 import AddIcon from '@material-ui/icons/Add';
@@ -74,10 +74,14 @@ const useStyles = makeStyles((theme) => ({
   drawer: {
     width: drawerWidth,
     flexShrink: 0,
-  
+    marginRight: 0,
   },
   drawerPaper: {
     width: drawerWidth,
+    color: '#481815',
+    height: 'fit-content',
+    borderRadius: '0 0 0 8px',
+    padding: '0 0 20px 0',
   },
   drawerHeader: {
     display: 'flex',
@@ -205,17 +209,17 @@ export default function NavBar() {
         anchor="right"
         open={open}
         onEscapeKeyDown={handleDrawerClose}
-        onBackDropClick={handleDrawerClose}
+        // onBackDropClick={handleDrawerClose}
         classes={{
           paper: classes.drawerPaper,
         }}
       >
         <div className={classes.drawerHeader}>
           <IconButton onClick={handleDrawerClose}>
-            {/* {theme.direction === 'rtl' ? <ChevronLeftIcon /> : <ChevronRightIcon />} */}
             {theme.direction === 'rtl' ? <AddIcon /> : <CloseIcon />}
           </IconButton>
         </div>
+        {/* <Typography variant="h4">Tuani</Typography> */}
         <Divider />
         <Divider />
         {/** Imported custom menu with expandable component */}
