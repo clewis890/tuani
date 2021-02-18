@@ -27,7 +27,7 @@ export default function ProductTitle() {
       <>
       <CardHeader
       className={classes.root}
-      title="Leather Products"
+      title="Leather Collection"
       subheader="Produced by a group of local artisans, this line of handmade classic-looking shoes will be amazing for your babies and toddlers.  Our collection will renew 2-3 times a year.  As always, one education kit will be donated on behalf of the final recipient, to a child in need for every unit gifted."></CardHeader>
       </>
     )

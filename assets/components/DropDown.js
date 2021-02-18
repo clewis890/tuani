@@ -101,6 +101,7 @@ export default function DropDown() {
           </ListItemLink>
           <ListItemLink 
           disableGutters="true"
+          href="/contact"
           button>
             <ListItemIcon>
             </ListItemIcon>
@@ -116,7 +117,7 @@ export default function DropDown() {
           </ListItemIcon>
           {/** Dropdown part of menu */}
           <ListItemText 
-          primary="Artesanal Products" />
+          primary="Artesanal Collection" />
           {open ? <ExpandLess /> : <ExpandMore />}
         </ListItem>
         <Collapse in={open} timeout="auto" unmountOnExit>
@@ -124,17 +125,17 @@ export default function DropDown() {
             <ListItemLink disableGutters="true" href="/leather" button className={classes.nested}>
               <ListItemIcon>
               </ListItemIcon>
-              <ListItemText primary="Leather" />
+              <ListItemText primary="Leather Collection" />
             </ListItemLink>
             <ListItemLink disableGutters="true" href="/textile" button className={classes.nested}>
               <ListItemIcon>
               </ListItemIcon>
-              <ListItemText primary="Textile" />
+              <ListItemText primary="Textile Collection" />
             </ListItemLink>
             <ListItemLink disableGutters="true" href="/wood" button className={classes.nested}>
               <ListItemIcon>
               </ListItemIcon>
-              <ListItemText primary="Wood" />
+              <ListItemText primary="Wood Collection" />
             </ListItemLink>
           </List>
         </Collapse>

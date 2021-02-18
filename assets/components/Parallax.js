@@ -38,7 +38,7 @@ export default function Parallax() {
     width: '100%',
     height: '100vh',
     margin: '0 auto',
-    padding: '0 0',
+    padding: '0',
     borderRadius: '0',
     // filter: 'blur(1.87px)',
     boxShadow: 'none'}}
@@ -61,7 +61,6 @@ export default function Parallax() {
         <h2
         className={classes.text}
         >
-          Tuani - Coming Soon!
         </h2>
     </Card>
     </>

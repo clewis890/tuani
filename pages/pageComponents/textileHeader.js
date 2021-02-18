@@ -27,7 +27,7 @@ export default function ProductTitle() {
         <>
         <CardHeader
         className={classes.root}
-        title="Textile Products"
+        title="Textile Collection"
         subheader="Coming soon!"></CardHeader>
         </>
         

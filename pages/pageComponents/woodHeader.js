@@ -29,7 +29,7 @@ export default function ProductTitle() {
        <>
         <CardHeader
         className={classes.root}
-        title="Handmade Wood Products"
+        title="Handmade Wood Collection"
         subheader="Our line of wood products are both functional and beautiful. Produced with legal, ethically obtained, and sustainably harvested wood, we offer a line of beautiful and unique gifts for you to make a lasting impression – with a protective finish and a sophisticated laser engraving… all put together in handmade bag produced by a group of in-need seamstress who get helped by the opportunity to put these bags together. As always, one education kit will be donated on behalf of the final recipient, to a child in need for every unit gifted."></CardHeader>
   </>
     )

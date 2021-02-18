@@ -11,9 +11,9 @@ import {
 import NavBarTransition from "./NavBarTransition";
 import NavBar from './NavBar';
 import Button from '@material-ui/core/Button'
-import Parallax from './Parallax';
+import ParallaxProduct from './parallaxProduct';
 
-const Header = props => {
+const ProductHeader = props => {
   const theme = createMuiTheme();
 
   return (
@@ -51,9 +51,9 @@ const Header = props => {
           </Toolbar>
         </AppBar>
       </NavBarTransition>
-      <Parallax />
+      <ParallaxProduct />
     </ThemeProvider>
   );
 };
 
-export default Header;
+export default ProductHeader;

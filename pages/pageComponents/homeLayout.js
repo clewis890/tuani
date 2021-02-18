@@ -12,6 +12,8 @@ import CardMedia from '@material-ui/core/CardMedia'
 import Hidden from '@material-ui/core/Hidden';
 import withWidth from '@material-ui/core/withWidth';
 import { createMuiTheme } from '@material-ui/core/styles'
+import Header from '../../assets/components/header';
+import ButtonBase from '@material-ui/core/ButtonBase';
 
 import { isPropertyAccessExpression } from 'typescript';
 import "typeface-cormorant"
@@ -24,11 +26,37 @@ const theme = createMuiTheme({
         ].join(','),
     },});
 
+    const images = [
+      {
+        url: '/',
+        title: 'Leather',
+        width: '30%',
+      },
+      {
+        url: '/',
+        title: 'Textile',
+        width: '30%',
+      },
+      {
+        url: '/',
+        title: 'Wood',
+        width: '30%',
+      },
+    ];
+
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
         width: '90%',
         margin: '2em auto',
+        overflow: 'hidden',
+    },
+    products: {
+      display: 'flex',
+      flexWrap: 'wrap',
+      minWidth: 300,
+      width: '80%',
+      margin: '0 auto',
     },
     container: {
         padding: theme.spacing(2),
@@ -36,9 +64,9 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         overflow: 'hidden',
+        margin: '0 auto',
     },
     paper: {
-        // fontFamily: 'Righteous, cursive',
         fontFamily: 'Cormorant',
         boxShadow: 'none',
         backgroundColor: 'inherit',
@@ -57,12 +85,76 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center',
     },
-    image: {
+    flag: {
        textAlign: 'center',
     },
     span: {
         fontWeight: '700',
         textTransform: 'uppercase',
+    },
+    image: {
+      position: 'relative',
+      height: 200,
+      [theme.breakpoints.down('xs')]: {
+        width: '100% !important', // Overrides inline-style
+        height: 150,
+      },
+      '&:hover, &$focusVisible': {
+        zIndex: 1,
+        '& $imageBackdrop': {
+          opacity: 0.85,
+        },
+        '& $imageMarked': {
+          opacity: 0,
+        },
+        '& $imageTitle': {
+          border: '4px solid currentColor',
+        },
+      },
+    },
+    focusVisible: {},
+    imageButton: {
+      position: 'absolute',
+      left: 0,
+      right: 0,
+      top: 0,
+      bottom: 0,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      color: theme.palette.common.white,
+    },
+    imageSrc: {
+      position: 'absolute',
+      left: 0,
+      right: 0,
+      top: 0,
+      bottom: 0,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center 40%',
+    },
+    imageBackdrop: {
+      position: 'absolute',
+      left: 0,
+      right: 0,
+      top: 0,
+      bottom: 0,
+      backgroundColor: theme.palette.common.black,
+      opacity: 0.4,
+      transition: theme.transitions.create('opacity'),
+    },
+    imageTitle: {
+      position: 'relative',
+      padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${theme.spacing(1) + 6}px`,
+    },
+    imageMarked: {
+      height: 3,
+      width: 18,
+      backgroundColor: theme.palette.common.white,
+      position: 'absolute',
+      bottom: -2,
+      left: 'calc(50% - 9px)',
+      transition: theme.transitions.create('opacity'),
     },
 }));
 
@@ -71,94 +163,34 @@ export default function HomeLayout() {
 
     return (
         <ThemeProvider theme={theme}>
+          <Header />
         <div className={classes.root}>
-            {/** This is the product preview card on home page.
- * 3 segments. Leather, Textile, Wood. Make hover effect
- * with a button that appears to navigate to individual product pages
- */}
-            {/* <Grid 
-            container 
-            direction="row"
-            justify="center"
-            item="true"
-            spacing={4}
-            >
-                <Grid item xs={12} md={12}>
-                    <Paper className={classes.paper}>
-                        <Typography variant="h5">Products</Typography>
-                        <Card md={3}>
-                                <CardMedia
-                                    component="img"
-                                    alt="Leather"
-                                    height="140"
-                                    image=""
-                                    title="Leather Products"
-                                />
-                                    <CardContent>
-                                        <Typography gutterBottom variant="h6" component="h2">
-                                            Leather Items
-                                        </Typography>
-                                    </CardContent>
-                        </Card>
-                        <Card md={3}>
-                                <CardMedia
-                                    component="img"
-                                    alt="Textile"
-                                    height="140"
-                                    image=""
-                                    title="Textile Products"
-                                />
-                                    <CardContent>
-                                        <Typography gutterBottom variant="h6" component="h2">
-                                            Textile Items
-                                        </Typography>
-                                    </CardContent>
-                        </Card>
-                        <Card md={3}>
-                                <CardMedia
-                                    component="img"
-                                    alt="Wood"
-                                    height="140"
-                                    image=""
-                                    title="Wood Products"
-                                />
-                                    <CardContent>
-                                        <Typography gutterBottom variant="h6" component="h2">
-                                            Wood Items
-                                        </Typography>
-                                    </CardContent>
-                        </Card>
-                    </Paper>
-                </Grid>
-            </Grid> */}
             <Grid 
             container 
-            spacing={10} 
             className={classes.container}
-            // direction="column"
             >
                 <Grid item xs={12} md={6}>
                     <Paper className={classes.paper}>
                         <span className={classes.span}>Tuani LLC is born of a desire to create a connection with and empower the people from my home country, Nicaragua.</span> Though my time in Nicaragua has been short, every time I travel there and I get to experience the people and the landscapes, I am amazed by the creativity and mastery of local artisans working on wood, leather, and textiles. These are hard-working people who are trying their best to showcase their passions and share the Nicaraguan culture with the world.
                     </Paper>
                 </Grid>
-                <Grid item className={classes.image} xs={12} md={6}>
+                <Grid item className={classes.flag} xs={12} md={6}>
                   
                 </Grid>
-                <Grid item className={classes.image} xs={12} md={6}>
+                <Grid item className={classes.flag} xs={12} md={6}>
                    
                    </Grid>
-                <Grid item className={classes.image} xs={12} md={6}>
+                <Grid item className={classes.flag} xs={12} md={6}>
                     <Image 
                     src="/flag.png"  
                     width={400} 
                     height={300}
                     />
                 </Grid>
-                <Grid item className={classes.image} xs={12} md={6}>
+                <Grid item className={classes.flag} xs={12} md={6}>
                    
                 </Grid>
-                <Grid item className={classes.image} xs={12} md={6}>
+                <Grid item className={classes.flag} xs={12} md={6}>
                    
                 </Grid>
                 <Grid item xs={12} md={6}>
@@ -178,8 +210,44 @@ export default function HomeLayout() {
                      Thank you for partnering with us in this journey!
                     </Paper>
                 </Grid>
+                <div className={classes.products}>
+                  <h4 
+                  style={{  textTransform: 'uppercase', fontSize: '1.3em', margin: '1em auto', width: '100%', textAlign: 'center' }}>
+                    Collection</h4>
+                  {images.map((image) => (
+        <ButtonBase
+          focusRipple
+          key={image.title}
+          className={classes.image}
+          focusVisibleClassName={classes.focusVisible}
+          style={{
+            width: image.width,
+          }}
+        >
+          <span
+            className={classes.imageSrc}
+            style={{
+              backgroundImage: `url(${image.url})`,
+            }}
+          />
+          <span className={classes.imageBackdrop} />
+          <span className={classes.imageButton}>
+            <Typography
+              component="span"
+              variant="subtitle1"
+              color="inherit"
+              className={classes.imageTitle}
+            >
+              {image.title}
+              <span className={classes.imageMarked} />
+            </Typography>
+          </span>
+        </ButtonBase>
+      ))}
+    </div>
             </Grid>
-        </div>
+        
+       </div>
         </ThemeProvider>
     )
 }

@@ -10,6 +10,7 @@ import ProductCard from './productComponents/textileCard'
 import { shadows } from '@material-ui/system';
 import Box from '@material-ui/core/Box'
 import ProductHeader from '../../pages/pageComponents/textileHeader'
+import HeaderProduct from './headerProduct';
 
 const theme = createMuiTheme({
     palette: {
@@ -41,6 +42,7 @@ const theme = createMuiTheme({
 export default function TextileLayout() {
     return (
         <React.Fragment >
+            <HeaderProduct />
             <CssBaseline />
                 <Box 
                     boxShadow={12}

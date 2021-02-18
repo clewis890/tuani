@@ -16,6 +16,7 @@ import Box from '@material-ui/core/Box'
 import Products from './woodGrid';
 import ProductCard from './productComponents/woodCard'
 import ProductHeader from '../../pages/pageComponents/woodHeader'
+import HeaderProduct from './headerProduct';
 import Header from './header'
 
 const theme = createMuiTheme({
@@ -48,6 +49,7 @@ const theme = createMuiTheme({
 export default function WoodLayout() {
     return (
         <React.Fragment >
+            <HeaderProduct />
             <CssBaseline />
                 <Box 
                     boxShadow={12}
