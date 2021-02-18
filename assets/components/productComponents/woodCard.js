@@ -19,9 +19,15 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 
+// NOTES ABOUT CARD WIDTH:
+
+// 454px - 600px the card expands and has excessive space
+
+// 818px - 960px card also expands with the excessive space
+
+
 const useStyles = makeStyles((theme => ({
     root: {
-        maxWidth: 320,
         elevation: 0,
         variant: 'elevated',
     },

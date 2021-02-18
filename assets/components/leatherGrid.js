@@ -25,102 +25,102 @@ export default function LeatherGrid() {
     return (
         <div className={classes.root}>
             <Grid container spacing={6}>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Paper className={classes.paper}>
                         <LeatherCard />
                     </Paper>
                 </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Paper className={classes.paper}>
                     <LeatherCard />
                     </Paper>
                 </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Paper className={classes.paper}>
                     <LeatherCard />
                     </Paper>
                 </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Paper className={classes.paper}>
                         <LeatherCard />
                     </Paper>
                 </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Paper className={classes.paper}>
                         <LeatherCard />
                     </Paper>
                 </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Paper className={classes.paper}>
                     <LeatherCard />
                     </Paper>
                 </Grid>
-                <Grid item xs={12} sm={6} md={3} >
+                <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Paper className={classes.paper}>
                     <LeatherCard />
                     </Paper>
                 </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Paper className={classes.paper}>
                         <LeatherCard />
                     </Paper>
                 </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Paper className={classes.paper}>
                         <LeatherCard />
                     </Paper>
                 </Grid>
-                <Grid item xs={12} sm={6} md={3} >
+                <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Paper className={classes.paper}>
                     <LeatherCard />
                     </Paper>
                 </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Paper className={classes.paper}>
                         <LeatherCard />
                     </Paper>
                 </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Paper className={classes.paper}>
                         <LeatherCard />
                     </Paper>
                 </Grid>
-                <Grid item xs={12} sm={6} md={3} >
+                <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Paper className={classes.paper}>
                     <LeatherCard />
                     </Paper>
                 </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Paper className={classes.paper}>
                         <LeatherCard />
                     </Paper>
                 </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Paper className={classes.paper}>
                         <LeatherCard />
                     </Paper>
                 </Grid>
-                <Grid item xs={12} sm={6} md={3} >
+                <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Paper className={classes.paper}>
                     <LeatherCard />
                     </Paper>
                 </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Paper className={classes.paper}>
                         <LeatherCard />
                     </Paper>
                 </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Paper className={classes.paper}>
                         <LeatherCard />
                     </Paper>
                 </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Paper className={classes.paper}>
                         <LeatherCard />
                     </Paper>
                 </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Paper className={classes.paper}>
                         <LeatherCard />
                     </Paper>

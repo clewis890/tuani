@@ -27,7 +27,6 @@ import Hover from '../popover';
 
 const useStyles = makeStyles((theme => ({
     root: {
-        maxWidth: 320,
         elevation: 0,
         variant: 'elevated',
         // backgroundColor: '#D6E0EB',

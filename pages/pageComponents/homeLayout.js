@@ -29,16 +29,19 @@ const theme = createMuiTheme({
     const images = [
       {
         url: '/',
+        href: '/leather',
         title: 'Leather',
         width: '30%',
       },
       {
         url: '/',
+        href: '/textile',
         title: 'Textile',
         width: '30%',
       },
       {
         url: '/',
+        href: '/wood',
         title: 'Wood',
         width: '30%',
       },
@@ -47,16 +50,17 @@ const theme = createMuiTheme({
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        width: '90%',
+        width: '100%',
         margin: '2em auto',
         overflow: 'hidden',
     },
     products: {
       display: 'flex',
       flexWrap: 'wrap',
-      minWidth: 300,
-      width: '80%',
+      // minWidth: 300,
+      width: '100%',
       margin: '0 auto',
+      justifyContent: 'center',
     },
     container: {
         padding: theme.spacing(2),
@@ -210,11 +214,14 @@ export default function HomeLayout() {
                      Thank you for partnering with us in this journey!
                     </Paper>
                 </Grid>
-                <div className={classes.products}>
-                  <h4 
-                  style={{  textTransform: 'uppercase', fontSize: '1.3em', margin: '1em auto', width: '100%', textAlign: 'center' }}>
+                {/* <div className={classes.products}> */}
+                 
+                 
+              <div className={classes.products}>
+              <h4 
+                  style={{  textTransform: 'uppercase', fontSize: '1.3em', margin: '1em auto', width: '80%', textAlign: 'center' }}>
                     Collection</h4>
-                  {images.map((image) => (
+              {images.map((image) => (
         <ButtonBase
           focusRipple
           key={image.title}
@@ -244,7 +251,9 @@ export default function HomeLayout() {
           </span>
         </ButtonBase>
       ))}
-    </div>
+            </div>
+
+    {/* </div> */}
             </Grid>
         
        </div>

@@ -15,12 +15,12 @@ const useStyles = makeStyles((theme) => ({
       padding: '0',
     },
     text: {
-        width: '90%',
+        width: 'fit-content',
       zIndex: '999',
       position: 'absolute',
       top: '50%',
       left: '60%',
-      transform: 'translate(-40%, -50%)',
+      transform: 'translate(-60%, -50%)',
         [theme.breakpoints.down('xs')]: {
             transform: 'translate(-50%, -50%)',
         },
