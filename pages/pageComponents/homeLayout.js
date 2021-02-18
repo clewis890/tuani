@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: 'none',
         backgroundColor: 'inherit',
         padding: theme.spacing(2),
-        textAlign: 'center',
+        textAlign: 'left',
         fontSize: '1.4em',
         lineHeight: '2em',
         opacity: '100%',
