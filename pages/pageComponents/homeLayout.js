@@ -24,9 +24,11 @@ const theme = createMuiTheme({
             'Cormorant',
             'serif',
         ].join(','),
-    },});
+},});
 
-    const images = [
+
+
+const images = [
       {
         url: '/',
         href: '/leather',
@@ -45,7 +47,17 @@ const theme = createMuiTheme({
         title: 'Wood',
         width: '30%',
       },
-    ];
+];
+
+const imageLinks = () => {
+  return (
+    <>
+      <a href="/leather" />
+      <a href="/textile" />
+      <a href="/wood" />
+    </>
+  );
+};
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -58,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
       display: 'flex',
       flexWrap: 'wrap',
       // minWidth: 300,
-      width: '100%',
+      width: '80%',
       margin: '0 auto',
       justifyContent: 'center',
     },
@@ -215,8 +227,7 @@ export default function HomeLayout() {
                     </Paper>
                 </Grid>
                 {/* <div className={classes.products}> */}
-                 
-                 
+                      
               <div className={classes.products}>
               <h4 
                   style={{  textTransform: 'uppercase', fontSize: '1.3em', margin: '1em auto', width: '80%', textAlign: 'center' }}>
@@ -230,6 +241,7 @@ export default function HomeLayout() {
           style={{
             width: image.width,
           }}
+          href="/leather"
         >
           <span
             className={classes.imageSrc}
@@ -252,10 +264,7 @@ export default function HomeLayout() {
         </ButtonBase>
       ))}
             </div>
-
-    {/* </div> */}
             </Grid>
-        
        </div>
         </ThemeProvider>
     )
