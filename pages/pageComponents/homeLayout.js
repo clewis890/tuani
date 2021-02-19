@@ -30,20 +30,17 @@ const theme = createMuiTheme({
 
 const images = [
       {
-        url: '/',
-        href: '/leather',
+        url: "/leather.jpg",
         title: 'Leather',
         width: '30%',
       },
       {
-        url: '/',
-        href: '/textile',
+        url: "/textile.jpg",
         title: 'Textile',
         width: '30%',
       },
       {
-        url: '/',
-        href: '/wood',
+        url: "/wood.jpg",
         title: 'Wood',
         width: '30%',
       },
@@ -61,6 +58,7 @@ const imageLinks = () => {
 
 const useStyles = makeStyles((theme) => ({
     root: {
+        fontFamily: 'Cormorant',
         flexGrow: 1,
         width: '100%',
         margin: '2em auto',
@@ -71,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
       flexWrap: 'wrap',
       // minWidth: 300,
       width: '80%',
-      margin: '0 auto',
+      margin: '2em auto',
       justifyContent: 'center',
     },
     container: {
@@ -94,10 +92,11 @@ const useStyles = makeStyles((theme) => ({
         margin: '3em auto',
     },
     title: {
+        fontFamily: 'inherit',
         fontSize: '2em',
         padding: '0 2em',
         textAlign: 'center',
-        margin: '1em auto',
+        margin: '0 auto 2em auto',
         display: 'flex',
         justifyContent: 'center',
     },
