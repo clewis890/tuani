@@ -5,6 +5,10 @@ import Header from "assets/components/header";
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 
+// Axios function to communicate with Nodemailer to send form
+// import { sendContactEmail } from './../networking/mail-api'
+
+
 const theme = createMuiTheme({
     typography: {
         fontFamily: [
@@ -44,32 +48,45 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         flexWrap: 'wrap',
+        flexDirection: 'column',
         height: '100%',
         margin: '0 auto',
         textAlign: 'center',
         '& .MuiTextField-root': {
-        margin: theme.spacing(10),
+        margin: theme.spacing(5),
         width: 200,
+        [theme.breakpoints.up('md')]: {
+            width: 400,
+            margin: theme.spacing(10),
+        },
     },
   },
+  formfields: {
+    display: 'flex',
+    flexDirection: 'column',
+    margin: '0 auto',
+  },
   formtitle: {
-    margin: '4em auto 1em auto',
+    width: '80%',
     textAlign: 'center',
+    margin: '4em auto 1em auto',
   },
   form: {
       fontSize: '7em',
   },
   submit: {
       textAlign: 'center',
-      margin: '0 auto 2em auto',
-      maxHeight: '60px',
+      margin: '1em auto 10em auto',
+    //   maxHeight: '60px',
+      padding: '0.5em 1.4em',
+      width: '20%',
   },
 }));
 
 
 export default function ContactLayout() {
     const classes = useStyles();
-    const [value, setValue] = React.useState(false);
+    const [value, setValue] = React.useState(null);
 
     const handleChange = (event) => {
         setValue(event.target.value);
@@ -80,24 +97,31 @@ export default function ContactLayout() {
 
         <Header />
         <Typography className={classes.formtitle} variant="h5">
-            Feel free to reach out if you would like to place a wholesale order, or just have any questions!
-        </Typography>
+            For any questions or if you want to inquire about wholesale orders, send us a message!
+                   </Typography>
         <form className={classes.root} noValidate autoComplete="off">
-            <div>
+            <div className={classes.formfields}>
                 <TextField 
                 id="standard-basic" 
                 label="First & Last Name"
                 className={classes.form}
+                autoComplete
+                autoFocus={true}
                 required
                  />
                 <TextField 
                 id="standard-basic" 
-                label="example@gmail.com"
+                label="Example@gmail.com"
+                autoComplete
+                autoFocus={true}
                 required
                 />
                 <TextField 
                 id="standard-multiline-flexible" 
                 label="Write your message here"
+                autoComplete
+                autoFocus={true}
+                fullWidth
                 multiline
                 required
                 rowsMax={5}
@@ -105,7 +129,7 @@ export default function ContactLayout() {
                 onChange={handleChange}
                 />
             </div>
-            <Button variant="outlined" color="primary" className={classes.submit}>
+            <Button variant="contained" color="primary" className={classes.submit}>
                 Send
             </Button>
         </form>

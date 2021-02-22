@@ -117,7 +117,7 @@ const useStyles = makeStyles((theme) => ({
       '&:hover, &$focusVisible': {
         zIndex: 1,
         '& $imageBackdrop': {
-          opacity: 0.85,
+          opacity: 0.65,
         },
         '& $imageMarked': {
           opacity: 0,
@@ -155,7 +155,7 @@ const useStyles = makeStyles((theme) => ({
       top: 0,
       bottom: 0,
       backgroundColor: theme.palette.common.black,
-      opacity: 0.4,
+      opacity: 0.3,
       transition: theme.transitions.create('opacity'),
     },
     imageTitle: {
@@ -210,7 +210,7 @@ export default function HomeLayout() {
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <Paper className={classes.paper} >
-                         I realized there was an opportunity to create an easier way for <span className={classes.span}>Nicaraguan artisans</span> to connect with the US market, by fulfilling the need of the North American market for <span className={classes.span}>incentive and appreciation gifts –</span> which many companies see as a way to create, maintain, or strengthen relationships with clients, alumni, or community influencers. I myself struggled from time to time to find a unique way to say thank you – but was at times underwhelmed by the generic options available in the market… who needs another padfolio or USB drive with the logo of their alma mater or their financial advisor, after all.
+                         I realized there was an opportunity to create an easier way for Nicaraguan artisans to connect with the US market, by fulfilling the need of the North American market for <span className={classes.span}>incentive and appreciation gifts –</span> which many companies see as a way to create, maintain, or strengthen relationships with clients, alumni, or community influencers. I myself struggled from time to time to find a unique way to say thank you – but was at times underwhelmed by the generic options available in the market… who needs another padfolio or USB drive with the logo of their alma mater or their financial advisor, after all.
                     </Paper>
                 </Grid>
                 <Grid item xs={12} md={6}>
