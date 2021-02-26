@@ -31,12 +31,12 @@ const theme = createMuiTheme({
 const images = [
       {
         url: "/leather.jpg",
-        title: 'Leather',
+        title: 'Leather Coming Soon!',
         width: '30%',
       },
       {
         url: "/textile.jpg",
-        title: 'Textile',
+        title: 'Textile Coming Soon!',
         width: '30%',
       },
       {
@@ -104,8 +104,7 @@ const useStyles = makeStyles((theme) => ({
        textAlign: 'center',
     },
     span: {
-        fontWeight: '700',
-        textTransform: 'uppercase',
+
     },
     image: {
       position: 'relative',
@@ -159,6 +158,14 @@ const useStyles = makeStyles((theme) => ({
       transition: theme.transitions.create('opacity'),
     },
     imageTitle: {
+      fontSize: '1.3rem',
+      [theme.breakpoints.down('xs')]: {
+        fontSize: '1.1rem',
+      },
+      display: 'flex',
+      width: '73%',
+      justifyContent: 'center',
+      textAlign: 'center',
       position: 'relative',
       padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${theme.spacing(1) + 6}px`,
     },
@@ -186,7 +193,15 @@ export default function HomeLayout() {
             >
                 <Grid item xs={12} md={6}>
                     <Paper className={classes.paper}>
-                        <span className={classes.span}>Tuani LLC is born of a desire to create a connection with and empower the people from my home country, Nicaragua.</span> Though my time in Nicaragua has been short, every time I travel there and I get to experience the people and the landscapes, I am amazed by the creativity and mastery of local artisans working on wood, leather, and textiles. These are hard-working people who are trying their best to showcase their passions and share the Nicaraguan culture with the world.
+                        <p className={classes.openingparagraph}>
+                        For the Nicaraguan people, Tuani means “cool”  and we believe it’s cool to give back. <br />
+                        </p>
+                        <p className={classes.openingparagraph}>
+                        The idea is simple: to connect talented artisans with a market for their products in the USA - while paying a fair wage AND with every unit sold, donating an education kit to a child in need - because, education!<br /> 
+                        </p>
+                        <p className={classes.openingparagraph}>
+                        Nicaragua is an amazing country! Everytime we visit, we are inspired by the creativity and mastery of local artisans working on wood, leather, and textiles.  These are hard-working people who are trying their best to showcase their passions and share the Nicaraguan culture with the world. <br />   
+                        </p>
                     </Paper>
                 </Grid>
                 <Grid item className={classes.flag} xs={12} md={6}>
@@ -209,8 +224,8 @@ export default function HomeLayout() {
                    
                 </Grid>
                 <Grid item xs={12} md={6}>
-                    <Paper className={classes.paper} >
-                         I realized there was an opportunity to create an easier way for Nicaraguan artisans to connect with the US market, by fulfilling the need of the North American market for <span className={classes.span}>incentive and appreciation gifts –</span> which many companies see as a way to create, maintain, or strengthen relationships with clients, alumni, or community influencers. I myself struggled from time to time to find a unique way to say thank you – but was at times underwhelmed by the generic options available in the market… who needs another padfolio or USB drive with the logo of their alma mater or their financial advisor, after all.
+                    <Paper className={classes.paper}>
+                    Trying to give it a different “twist” Tuani is starting with a line of beautiful and unique wood products that organizations and businesses can use as incentive and appreciation gifts – which many companies see as a way to create, maintain, or strengthen relationships with clients, alumni, or community influencers.  I myself struggled from time to time to find a unique way to say thank you – but was at times underwhelmed by the generic options available in the market… Who needs another padfolio or USB drive with the logo of their alma mater or their financial advisor, after all.
                     </Paper>
                 </Grid>
                 <Grid item xs={12} md={6}>
@@ -221,7 +236,7 @@ export default function HomeLayout() {
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <Paper className={classes.paper}
-                    >So that’s why I founded Tuani LLC… for the Nicaraguan people, <span className={classes.span}>Tuani means “cool” </span>and we believe it’s cool to give back. Our products shows our appreciation for our clients, and it also helps the local artisans that created it. Additionally, an education kit will be donated to a Nicaraguan kid in need on your behalf... because it’s Tuani to be nice! <br />
+                    >So that’s why we founded Tuani LLC.  Our products show appreciation for those that are important to you - the receivers will love the thoughtful and unique gifts while a child in need will benefit from an education kit donated on the receiver’s behalf...  because it’s Tuani to be nice!  
                      Thank you for partnering with us in this journey!
                     </Paper>
                 </Grid>
