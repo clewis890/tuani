@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Tuanipattern from '../../public/patterntuani.png'
+
 // Styles
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { createMuiTheme, makeStyles } from '@material-ui/core/styles';
@@ -56,13 +58,11 @@ export default function WoodLayout() {
                     borderRadius="15px"
                     m={10, 2}
                     p={50, 2, 10, 2}
-                    style={{ backgroundColor: '#D6E0EB', height: '100%', marginTop: '110px', marginBottom: '100px' }}
+                    style={{ backgroundImage: `url(${Tuanipattern})`, height: '100%', marginTop: '110px', marginBottom: '100px' }}
                 >     
                 <ProductHeader />                
                     <ThemeProvider theme={theme}>
-                        <Container  
-                        maxWidth="lg"
-                        >
+                        <Container maxWidth="lg">
                             <Typography color="primary" component="div" style={{ margin: '0', padding: '10px', width: '100%', height: '100%'}}>
                                 <Products>
                                 <ProductCard />

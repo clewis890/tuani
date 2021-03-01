@@ -4,6 +4,7 @@ import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/sty
 import Header from "assets/components/header";
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
+import Tuanipattern from '../../public/patterntuani.png'
 
 // Axios function to communicate with Nodemailer to send form
 // import { sendContactEmail } from './../networking/mail-api'
@@ -44,13 +45,19 @@ const theme = createMuiTheme({
 
 const useStyles = makeStyles((theme) => ({
     root: {
+        height: '100%',
+        // margin: '5em auto',
+        padding: '0',
+        backgroundImage: `url(${Tuanipattern})`,
+    },
+    form: {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         flexWrap: 'wrap',
         flexDirection: 'column',
         height: '100%',
-        margin: '0 auto',
+        margin: '0em auto',
         textAlign: 'center',
         '& .MuiTextField-root': {
         margin: theme.spacing(5),
@@ -64,14 +71,17 @@ const useStyles = makeStyles((theme) => ({
   formfields: {
     display: 'flex',
     flexDirection: 'column',
-    margin: '0 auto',
+    margin: '2em auto',
+    backgroundColor: '#D6E0EB',
+    opacity: '75%',
+    borderRadius: '15px',
   },
   formtitle: {
     width: '80%',
     textAlign: 'center',
-    margin: '4em auto 1em auto',
+    margin: '5em auto 0 auto',
   },
-  form: {
+  formfield: {
       fontSize: '7em',
   },
   submit: {
@@ -94,17 +104,17 @@ export default function ContactLayout() {
 
     return (
         <ThemeProvider theme={theme}>
-
         <Header />
+        <div className={classes.root}>
         <Typography className={classes.formtitle} variant="h5">
             For any questions or if you want to inquire about wholesale orders, send us a message!
-                   </Typography>
-        <form className={classes.root} noValidate autoComplete="off">
+        </Typography>
+        <form className={classes.form} noValidate autoComplete="off">
             <div className={classes.formfields}>
                 <TextField 
                 id="standard-basic" 
                 label="First & Last Name"
-                className={classes.form}
+                className={classes.formfield}
                 autoComplete
                 autoFocus={true}
                 required
@@ -124,6 +134,7 @@ export default function ContactLayout() {
                 fullWidth
                 multiline
                 required
+                size='medium'
                 rowsMax={5}
                 value={value}
                 onChange={handleChange}
@@ -133,6 +144,7 @@ export default function ContactLayout() {
                 Send
             </Button>
         </form>
+        </div>
     </ThemeProvider>
     )
 }

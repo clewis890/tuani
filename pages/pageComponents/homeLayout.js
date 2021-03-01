@@ -7,7 +7,9 @@ import Typography from '@material-ui/core/Typography'
 import { createMuiTheme } from '@material-ui/core/styles'
 import Header from '../../assets/components/header';
 import ButtonBase from '@material-ui/core/ButtonBase';
+import Tuanipattern from '../../public/patterntuani.png'
 
+// unused imports
 import PropTypes from 'prop-types';
 import Parallax from '../../assets/components/Parallax'
 import Card from '@material-ui/core/Card'
@@ -27,7 +29,14 @@ const theme = createMuiTheme({
         ].join(','),
 },});
 
-
+const pattern = [
+  {
+      url: "/patterntuani.png",
+      width: '100%',
+      height: '100%',
+      background: 'no-repeat cover',
+  }
+]
 
 const images = [
       {
@@ -62,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'Cormorant',
         flexGrow: 1,
         width: '100%',
-        margin: '2em auto',
+        margin: '0 auto',
         overflow: 'hidden',
     },
     products: {
@@ -73,7 +82,12 @@ const useStyles = makeStyles((theme) => ({
       margin: '2em auto',
       justifyContent: 'center',
     },
+    tuaniwatermark: {
+      height: '500px',
+      zIndex: '0',
+    },
     container: {
+        zIndex: '1',
         padding: theme.spacing(2),
         display: 'flex',
         justifyContent: 'center',
@@ -187,12 +201,23 @@ export default function HomeLayout() {
     return (
         <ThemeProvider theme={theme}>
           <Header />
-        <div className={classes.root}>
-            <Grid 
+        <div 
+        className={classes.root}
+        style={{ backgroundImage: `url(${Tuanipattern})` }}
+        >
+          <Grid 
             container 
             className={classes.container}
             >
                 <Grid item xs={12} md={6}>
+                {/* <Image 
+          className={classes.tuaniwatermark}
+          src="/images/patterntuani.png"
+          alt="Pattern watermark background"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          /> */}
                     <Paper className={classes.paper}>
                         <p className={classes.openingparagraph}>
                         For the Nicaraguan people, Tuani means “cool”  and we believe it’s cool to give back. <br />
