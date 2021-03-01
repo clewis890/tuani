@@ -195,10 +195,7 @@ export default function NavBar() {
             onKeyDown={handleDrawerOpen}
             className={clsx(open && classes.hide)}
           >
-            <MenuIcon
-            className={classes.menuicon}
-            color="#D6E0EB"
-            />
+            <MenuIcon className={classes.menuicon}/>
           </IconButton>
         {/* </Toolbar>
       </AppBar> */}

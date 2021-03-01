@@ -3,6 +3,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import WoodCard from './productComponents/woodCard';
+import BottleCard from './productComponents/BottleCard';
+import DeskBowl from './productComponents/DeskBowl';
+import DeskCalendar from './productComponents/DeskCalendar';
+import Pencil from './productComponents/Pencil';
+import CheeseBoard from './productComponents/CheeseBoard';
 import Typography from '@material-ui/core/Typography'
 
 const useStyles = makeStyles((theme) => ({
@@ -30,27 +35,27 @@ export default function WoodGrid() {
                 </Grid>
                 <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Paper className={classes.paper}>
-                    <WoodCard />
+                    <BottleCard />
                     </Paper>
                 </Grid>
                 <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Paper className={classes.paper}>
-                        <WoodCard />
+                        <DeskCalendar />
                     </Paper>
                 </Grid>
                 <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Paper className={classes.paper}>
-                        <WoodCard />
+                        <DeskBowl />
                     </Paper>
                 </Grid>
                 <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Paper className={classes.paper}>
-                    <WoodCard />
+                    <Pencil />
                     </Paper>
                 </Grid>
                 <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Paper className={classes.paper}>
-                    <WoodCard />
+                    <CheeseBoard />
                     </Paper>
                 </Grid>
                 <Grid item xs={12} sm={6} md={4} lg={3}>

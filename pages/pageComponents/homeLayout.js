@@ -3,19 +3,20 @@ import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Image from 'next/image'
+import Typography from '@material-ui/core/Typography'
+import { createMuiTheme } from '@material-ui/core/styles'
+import Header from '../../assets/components/header';
+import ButtonBase from '@material-ui/core/ButtonBase';
+
 import PropTypes from 'prop-types';
 import Parallax from '../../assets/components/Parallax'
-import Typography from '@material-ui/core/Typography'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Hidden from '@material-ui/core/Hidden';
 import withWidth from '@material-ui/core/withWidth';
-import { createMuiTheme } from '@material-ui/core/styles'
-import Header from '../../assets/components/header';
-import ButtonBase from '@material-ui/core/ButtonBase';
-
 import { isPropertyAccessExpression } from 'typescript';
+
 import "typeface-cormorant"
 
 const theme = createMuiTheme({
@@ -205,11 +206,11 @@ export default function HomeLayout() {
                     </Paper>
                 </Grid>
                 <Grid item className={classes.flag} xs={12} md={6}>
-                  
+                    {/** Empty Grid item to facilitate spacing */}
                 </Grid>
                 <Grid item className={classes.flag} xs={12} md={6}>
-                   
-                   </Grid>
+                   {/** Empty Grid item to facilitate spacing */}
+                </Grid>
                 <Grid item className={classes.flag} xs={12} md={6}>
                     <Image 
                     src="/flag.png"  
@@ -218,10 +219,10 @@ export default function HomeLayout() {
                     />
                 </Grid>
                 <Grid item className={classes.flag} xs={12} md={6}>
-                   
+                   {/** Empty Grid item to facilitate spacing */}
                 </Grid>
                 <Grid item className={classes.flag} xs={12} md={6}>
-                   
+                    {/** Empty Grid item to facilitate spacing */}
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <Paper className={classes.paper}>
@@ -229,19 +230,18 @@ export default function HomeLayout() {
                     </Paper>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                   
+                    {/** Empty Grid item to facilitate spacing */}
                 </Grid>
                 <Grid item xs={12} md={6}>
-                    
+                    {/** Empty Grid item to facilitate spacing */}
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <Paper className={classes.paper}
                     >So that’s why we founded Tuani LLC.  Our products show appreciation for those that are important to you - the receivers will love the thoughtful and unique gifts while a child in need will benefit from an education kit donated on the receiver’s behalf...  because it’s Tuani to be nice!  
                      Thank you for partnering with us in this journey!
-                    </Paper>
+                     <br />** Stayed tuned for our first donation of education kits on Summer 2021 once international travel is normalized.                    </Paper>
                 </Grid>
                 {/* <div className={classes.products}> */}
-                      
               <div className={classes.products}>
               <h4 
                   style={{  textTransform: 'uppercase', fontSize: '1.3em', margin: '1em auto', width: '80%', textAlign: 'center' }}>

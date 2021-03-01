@@ -33,8 +33,9 @@ const useStyles = makeStyles((theme => ({
     },
     media: {
         height: '100%',
-        width: '80%',
-        paddingTop: '56.25%',
+        width: '100%',
+        // paddingTop: '56.25%',
+        paddingTop: '78.25%',
         margin: '0 auto',
     },
     expand: {
@@ -53,8 +54,7 @@ const useStyles = makeStyles((theme => ({
 })));
 
 
-{/** RENAME THIS FILE TO LEATHER CARD */}
-export default function ProductCard() {
+export default function BottleCard() {
     const classes = useStyles();
     const [expanded, setExpanded] = React.useState(false);
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -89,17 +89,19 @@ export default function ProductCard() {
                 //         <MoreVertIcon />
                 //     </IconButton>
                 // }
-                title="Coaster Set"
-                subheader="6 coasters"
+                title="Wine / Bottle Holder"
+                subheader="                   .                  "
                 />
                 <CardMedia
                     className={classes.media}
-                    image="/coaster.jpg"
+                    image="/bottle.jpg"
                     title="Product Name"
                 />
                 <CardContent>
                     <Typography variant="body2" color="textSecondary" component="p">
+                       
                         <br/>
+                    
                     </Typography>
                 </CardContent>
                 <CardActions disableSpacing>
