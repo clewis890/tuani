@@ -7,7 +7,7 @@ import BottleCard from './productComponents/BottleCard';
 import DeskBowl from './productComponents/DeskBowl';
 import DeskCalendar from './productComponents/DeskCalendar';
 import Pencil from './productComponents/Pencil';
-import CheeseBoard from './productComponents/CheeseBoard';
+import CheeseBoard from './productComponents/Cheeseboard';
 import Typography from '@material-ui/core/Typography'
 
 const useStyles = makeStyles((theme) => ({
